@@ -1,24 +1,40 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css2?family=Abel');
 
 body {
     padding: 0;
-    background: #eee none repeat scroll 0 0;
-    max-width: 1000px;
+    background: #3b3b3b none repeat scroll 0 0;
+    width: 1600px;
     margin: 0px auto;
     padding: 1em;
-    color: #000;
-    font-family: "Open Sans", "Bitstream Vera Sans", "Verdana", sans-serif;
+    color: #bbbbbb;
+    font-family: "Abel", "Bitstream Vera Sans", "Verdana", sans-serif;
     line-height: 1.4em;
-    font-size: 90%;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    font-size: 1.5rem;
+}
+
+::-webkit-scrollbar {
+    width: .3em;
+    background: #3b3b3b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e2e2e2;
+    border-radius: 7px;
+    -webkit-box-shadow: none;
+}
+
+p {
+    margin-left: 2em;
 }
 
 code {
-    color: #00f;
+    color: #afafff;
     padding: 1px 1px 1px 1px;
-    border: 1px solid #ddd;
-    background: #eee;
-    font-size: 115%;
-    border-radius: 2px;
+    border: 1px solid #5b5b5b;
+    background: #5b5b5b;
+    border-radius: 4px;
     line-height: 1em;
     font-family: monospace;
 }
@@ -36,36 +52,33 @@ pre {
 }
 
 div#content {
-    border: 1px solid #bbb;
-    background: #fff;
+    background: #2b2b2b;
+    border-radius: 7px;
     margin: 0;
     padding: 3em;
 }
 
 blockquote {
     padding: 0px 10px 0px 10px;
-    border: 1px solid #ddd;
-    background: #eee;
-    box-shadow: 5px 5px 5px #eee;
-    border-radius: 2px;
+    border: 1px solid #3b3b3b;
+    background: #3b3b3b;
+    border-radius: 4px;
     line-height: 1.2em;
 }
 
 a {
-    color: #139;
+    color: #79a8ff;
     text-decoration: underline;
     padding: 1px;
 }
 
 a:hover {
-    color: #900;
+    color: #ff5f59;
 }
 
-/*
 a:visited {
-    color: #939;
+    color: #feacd0;
 }
-*/
 
 #table-of-contents {
     margin: 1em 0;
@@ -92,15 +105,12 @@ div.title {
     margin: -1em -1em 0;
     font-size: 200%;
     font-weight: bold;
-    background: #369;
-    color: #fff;
     padding: .75em 1em;
     letter-spacing: .1em;
 }
 
 h1 {
-    background: #369 none repeat scroll 0 0;
-    font-family: "Cardo", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: "Abel", "Palatino Linotype", "Book Antiqua", Palatino, serif;
     color: #fff;
     font-size: 230%;
     font-weight: bold;
@@ -110,33 +120,35 @@ h1 {
 }
 
 h2 {
+    color: #fff;
     font-size: 200%;
-    font-family: "Cardo", "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    border-bottom: 1px solid #ccc;
-    padding: .2em;
+    font-family: "Abel", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    padding: .1em 0 .5em 0;
+    border-bottom: 2px solid #646464;
 }
 
 h3 {
-    font-size: 170%;
-    font-family: "Cardo", "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    border-bottom: 1px solid #eee;
+    color: #e2e2e2;
+    font-size: 150%;
+    font-family: "Abel", "Palatino Linotype", "Book Antiqua", Palatino, serif;
     padding: .2em;
 }
 
 h4 {
-    font-size: 140%;
-    font-family: "Cardo", "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    border-bottom: 1px solid #eee;
+    color: #e2e2e2;
+    font-size: 120%;
+    font-family: "Abel", "Palatino Linotype", "Book Antiqua", Palatino, serif;
     padding: .2em;
 }
 
-/* h1, h2, h3, h4, h5, h6 {
-    text-transform: capitalize;
-}
-*/
-
 tt {
     color: #00f;
+}
+
+img {
+    /* box-shadow: 0 0 0.6em rgba(0, 0, 0, 1); /\* Change the values for your preferred shadow effect *\/ */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.6) 0px 3px 6px;
+    border-radius: 10px; /* Adjust the value for your preferred roundness */
 }
 
 .verbatim {
@@ -161,6 +173,7 @@ div#postamble {
     font-size: 80%;
     padding: 0;
     margin: 0;
+    margin-top: 1em;
 }
 
 div#postamble p {
@@ -183,12 +196,12 @@ table {
 }
 
 th, td {
-    border: 1px solid #777;
+    border: 1px solid #646464;
     padding: .3em;
     margin: 2px;
 }
 th {
-    background: #eee;
+    background: #646464;
 }
 
 span.underline {
@@ -196,7 +209,7 @@ span.underline {
 }
 
 .fixme {
-    background: #ff0;
+    background: #fec43f;
     font-weight: bold;
 }
 .ra {
@@ -233,9 +246,9 @@ span.underline {
 .title { text-align: center; }
 .todo  {
     font-family: monospace;
-    color: red;
+    color: #c6daff;
 }
-.done { color: green; }
+.done { color: #88ca9f; }
 .timestamp { color: gray }
 .timestamp-kwd { color: #f59ea0; }
 .tag {
